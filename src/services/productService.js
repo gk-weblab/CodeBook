@@ -2,14 +2,14 @@ function getUrl(data, type) {
 	switch (type) {
 		case "search":
 			return `444/products?name_like=${data}`;
-			break;
+			
 		case "featured":
 			return "444/featured_products";
 		case "single":
 			return `444/products/${data}`;
 		default:
 			return `444/products?name_like=`;
-			break;
+			
 	}
 }
 

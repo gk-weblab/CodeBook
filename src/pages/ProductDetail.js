@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import { ErrorComponent, Rating } from "../components";
 import { useTitle } from "../hooks/useTitle";
 import { useCart } from "../context";

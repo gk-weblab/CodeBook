@@ -21,7 +21,7 @@ export const ProductsList = () => {
     (reason) => {
       setError(reason);
     })
-  }, [searchTerm]);
+  }, [searchTerm]);//eslint-disable-line
 
 
   if(error) { return (<ErrorComponent error={error} name={"products"}/>)}
