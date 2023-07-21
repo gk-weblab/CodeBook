@@ -14,7 +14,7 @@ function getUrl(data, type) {
 }
 
 export async function getProducts(data='', type ="search") {
-	const baseURL = "http://localhost:4000/";
+	const baseURL = process.env.REACT_APP_URL;
 	let url = getUrl(data, type);
 	try {
 		const response = await fetch(`${baseURL}${url}`);

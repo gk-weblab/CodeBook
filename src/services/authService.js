@@ -6,7 +6,7 @@ function setToken(data) {
 }
  async function fetchData(route,requestOptions) {
 	try{
-		const response = await fetch(`http://localhost:4000/${route}`, requestOptions);
+		const response = await fetch(`${process.env.REACT_APP_URL}${route}`, requestOptions);
 		
 	    const data = await response.json();
         return data;

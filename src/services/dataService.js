@@ -12,7 +12,7 @@ export async function getUser(){
         method: "GET",
         headers: {"Content-type":"application/json",Authorization:`Bearer ${token}`}
     }
-    const response = await fetch(`http://localhost:4000/600/users/${34}`,requestOptions)
+    const response = await fetch(`${process.env.REACT_APP_URL}600/users/${34}`,requestOptions)
     if(!response.ok){
          throw response
     }
@@ -24,7 +24,7 @@ export async function getUserOrders() {
     
     const {id,token}  = await getSession()
     console.log(id,token)
-    const response = await fetch(`http://localhost:4000/660/orders?user.id=${id}`,{
+    const response = await fetch(`${process.env.REACT_APP_URL}660/orders?user.id=${id}`,{
       method: "GET",
       headers: {"Content-type":"application/json",Authorization:`Bearer ${token}`}
   });
@@ -36,7 +36,7 @@ export async function getUserOrders() {
 export async function createOrder(order) {
     try {
         const {token} = await getSession()
-    const response = await fetch("http://localhost:4000/660/orders",{
+    const response = await fetch(`${process.env.REACT_APP_URL}660/orders`,{
         method: "POST",
         headers: {"Content-type":"application/json",Authorization:`Bearer ${token}`},
         body: JSON.stringify(order)
