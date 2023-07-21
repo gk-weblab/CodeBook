@@ -3,7 +3,7 @@ import { useCart } from "../../../context"
 import { Link } from "react-router-dom"
 export const DashBoardCard = ({card}) => {
     const {grouped} = useCart()
-    const {cartList,amount_paid,user,id} = card
+    const {cartList,amount_paid,id} = card
     const groupedCartList = grouped(cartList)
   return (
     <div className="max-w-4xl m-auto p-2 mb-5 border dark:border-slate-700">

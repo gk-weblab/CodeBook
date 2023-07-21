@@ -31,7 +31,7 @@ export const CartProvider = ({children}) => {
         //if you try to directly copy it will create a reference to array
         const copiedCartList = state.cartList.slice()
         const index = copiedCartList.findIndex((item) => item.id === product.id)
-        const updateCart = copiedCartList.splice(index,1)
+        copiedCartList.splice(index,1)
         //console.log(updateCart,index,copiedCartList)
         dispatch({
             type: "REMOVE_ONE_FROM_CART",

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { logout } from "../../services";
 export const DropdownLoggedIn = ({token,setShow}) => {
     const user = jwt(token);
-    const {email,sub} = user
+    const {email} = user
     const navigate  = useNavigate()
     const handleLogout = () => {
         logout();

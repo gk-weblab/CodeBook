@@ -29,7 +29,7 @@ export const Header = () => {
   }
   useEffect(() => {
     document.addEventListener("click", closeDropDown)
-  }, [show])
+  }, [show])//eslint-disable-line
   
   
   return (

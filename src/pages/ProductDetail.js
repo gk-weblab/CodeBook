@@ -6,7 +6,7 @@ import { useCart } from "../context";
 import { getProducts } from "../services";
 
 export const ProductDetail = () => {
-	const navigate = useNavigate();
+
 	const { cartList, addToCart, removeFromCart } = useCart();
 	const [inCart, setInCart] = useState();
 
